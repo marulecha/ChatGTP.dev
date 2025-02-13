@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ChatGTP There are no stupid questions... just stupid answers ;)</title>
+    <style>
+        body {
+            font-family: 'Courier New', Courier, monospace;
+            background-color: #1a1a1a;
+            color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+            overflow: hidden;
+        }
+        h1 {
+            font-size: 3em;
+            margin-top: 20%;
+            text-shadow: 0 0 10px #ff0000, 0 0 20px #ff0000;
+        }
+        p {
+            font-size: 1.5em;
+            margin: 20px 0;
+            text-shadow: 0 0 5px #ffffff, 0 0 10px #ffffff;
+        }
+        .coming-soon {
+            font-size: 1.2em;
+            margin: 20px 0;
+            color: #ffcc00;
+            text-shadow: 0 0 5px #ffcc00, 0 0 10px #ffcc00;
+        }
+        .spooky-background {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('https://www.transparenttextures.com/patterns/black-paper.png');
+            opacity: 0.5;
+            z-index: -1;
+        }
+        .ghost {
+            position: absolute;
+            width: 100px;
+            height: 100px;
+            background: url('https://i.imgur.com/3G4c8dO.png') no-repeat center center;
+            background-size: contain;
+            animation: float 3s ease-in-out infinite;
+        }
+        @keyframes float {
+            0% { transform: translateY(0); }
+            50% { transform: translateY(-20px); }
+            100% { transform: translateY(0); }
+        }
+    </style>
+</head>
+<body>
+    <div class="spooky-background"></div>
+    <h1>ChatGTP</h1>
+    <p>There are no stupid questions... just stupid answers ;)</p>
+    <div class="coming-soon">Coming Soon</div>
+    
+    <div class="ghost" style="top: 10%; left: 20%;"></div>
+    <div class="ghost" style="top: 30%; left: 60%;"></div>
+    <div class="ghost" style="top: 50%; left: 40%;"></div>
+    <div class="ghost" style="top: 70%; left: 80%;"></div>
+
+    <script>
+        // Optional: Add some spooky sound effects
+        const audio = new Audio('https://www.soundjay.com/button/sounds/button-1.mp3');
+        audio.loop = true;
+        audio.volume = 0.1;
+        audio.play();
+    </script>
+</body>
+</html>
