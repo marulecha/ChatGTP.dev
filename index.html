@@ -3,12 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ChatGTP There are no stupid questions... just stupid answers ;)</title>
+    <title>ChatGTP - Hack the Future</title>
     <style>
+        @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap');
+        
         body {
-            font-family: 'Courier New', Courier, monospace;
-            background-color: #1a1a1a;
-            color: #f0f0f0;
+            font-family: 'Orbitron', sans-serif;
+            background-color: #0a0a0a;
+            color: #00ff99;
             margin: 0;
             padding: 0;
             text-align: center;
@@ -16,61 +18,81 @@
         }
         h1 {
             font-size: 3em;
-            margin-top: 20%;
-            text-shadow: 0 0 10px #ff0000, 0 0 20px #ff0000;
+            margin-top: 15%;
+            text-shadow: 0 0 20px #00ff99, 0 0 40px #00ff99;
+            animation: glitch 1s infinite alternate;
         }
         p {
             font-size: 1.5em;
             margin: 20px 0;
-            text-shadow: 0 0 5px #ffffff, 0 0 10px #ffffff;
+            text-shadow: 0 0 10px #00ff99;
         }
         .coming-soon {
             font-size: 1.2em;
             margin: 20px 0;
-            color: #ffcc00;
-            text-shadow: 0 0 5px #ffcc00, 0 0 10px #ffcc00;
+            color: #00ccff;
+            text-shadow: 0 0 15px #00ccff;
+            animation: flicker 1.5s infinite alternate;
         }
-        .spooky-background {
+        .matrix-background {
             position: absolute;
             top: 0;
             left: 0;
             width: 100%;
             height: 100%;
-            background-image: url('https://www.transparenttextures.com/patterns/black-paper.png');
-            opacity: 0.5;
+            background: url('https://www.transparenttextures.com/patterns/dark-matter.png');
+            opacity: 0.3;
             z-index: -1;
         }
         .ghost {
             position: absolute;
-            width: 100px;
-            height: 100px;
-            background: url('https://i.imgur.com/3G4c8dO.png') no-repeat center center;
+            width: 80px;
+            height: 80px;
+            background: url('https://i.imgur.com/Zh5SXYm.png') no-repeat center center;
             background-size: contain;
-            animation: float 3s ease-in-out infinite;
+            animation: float 4s ease-in-out infinite, glitch 1.5s infinite alternate;
         }
         @keyframes float {
             0% { transform: translateY(0); }
             50% { transform: translateY(-20px); }
             100% { transform: translateY(0); }
         }
+        @keyframes flicker {
+            0% { opacity: 1; }
+            50% { opacity: 0.5; }
+            100% { opacity: 1; }
+        }
+        @keyframes glitch {
+            0% { text-shadow: 2px 2px 5px #00ff99, -2px -2px 5px #00ccff; }
+            100% { text-shadow: -2px -2px 5px #00ff99, 2px 2px 5px #00ccff; }
+        }
     </style>
 </head>
 <body>
-    <div class="spooky-background"></div>
+    <div class="matrix-background"></div>
     <h1>ChatGTP</h1>
-    <p>There are no stupid questions... just stupid answers ;)</p>
-    <div class="coming-soon">Coming Soon</div>
+    <p>Hack the Future</p>
+    <div class="coming-soon">Coming Soon...</div>
     
     <div class="ghost" style="top: 10%; left: 20%;"></div>
     <div class="ghost" style="top: 30%; left: 60%;"></div>
     <div class="ghost" style="top: 50%; left: 40%;"></div>
     <div class="ghost" style="top: 70%; left: 80%;"></div>
-
+    
     <script>
-        // Optional: Add some spooky sound effects
-        const audio = new Audio('https://www.soundjay.com/button/sounds/button-1.mp3');
+        // Add randomized ghost movement
+        document.querySelectorAll('.ghost').forEach(ghost => {
+            setInterval(() => {
+                let newX = Math.random() * window.innerWidth - 100;
+                let newY = Math.random() * window.innerHeight - 100;
+                ghost.style.transform = `translate(${newX}px, ${newY}px)`;
+            }, 3000);
+        });
+        
+        // Optional: Add some cyberpunk sound effects
+        const audio = new Audio('https://www.soundjay.com/button/sounds/button-29.mp3');
         audio.loop = true;
-        audio.volume = 0.1;
+        audio.volume = 0.05;
         audio.play();
     </script>
 </body>
